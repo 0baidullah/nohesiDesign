@@ -5,7 +5,6 @@
     "Help & FAQ support",
   ];
   import Tier from "../lib/assets/tier0.png";
-  import Gift from "../lib/assets/gift.png";
   import Tick from "../lib/assets/fi_1008958.png";
 </script>
 
@@ -86,9 +85,9 @@
     "Monthly public car updates",
     "Help & FAQ support",
   ];
-  import Tier from "../lib/assets/tier0.png";
-  import Gift from "../lib/assets/gift.png";
-  import Tick from "../lib/assets/fi_1008958.png";
+  import Tier from "assets/tier0.png";
+  import Gift from "assets/Gift.png";
+  import Tick from "assets/fi_1008958.png";
 </script>
 
 <!-- ✅ Responsive grid wrapper -->
