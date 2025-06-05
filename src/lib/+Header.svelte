@@ -121,7 +121,7 @@
         </button>
       </a>
 
-      <a href="/get-started">
+      <a href="/Nohesi">
         <button
           class="w-[133px] h-9 flex items-center rounded-md px-3 py-2 border border-white/5 text-[14px] font-inter-tight font-medium leading-5 tracking-normal hover:bg-white/5 transition-colors"
         >
