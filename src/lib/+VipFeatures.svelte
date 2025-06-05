@@ -85,23 +85,22 @@
     "Monthly public car updates",
     "Help & FAQ support",
   ];
-  // import Tier from "assets/tier0.png";
-  // import Gift from "assets/Gift.png";
-  // import Tick from "assets/fi_1008958.png";
+  import Tier from "../public/static/assets/tier0.png";
+  import Tick from "../public/static/assets/fi_1008958.png";
+  import Gift from "../public/static/assets/Gift.png";
+
 </script>
 
-<!-- ✅ Responsive grid wrapper -->
 <div
   class="w-full px-4 py-6 grid gap-6
          grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4
          justify-items-center"
 >
-  <!-- ✅ Card starts -->
   <div
     class="w-[342px] h-[639px] gap-2 bg-black text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md"
   >
     <div class="w-[294px] h-[20px] flex items-center gap-2">
-      <img src={'assets/tier0.png'} alt="Tier 0" class="w-4 h-4 object-cover rounded-lg" />
+      <img src={Tier} alt="Tier 0" class="w-4 h-4 object-cover rounded-lg" />
       <div
         class="font-['Roboto_Flex'] font-bold italic text-[16px] leading-5 tracking-normal uppercase"
       >
@@ -130,7 +129,7 @@
       </button>
 
       <button class="w-[114px] h-[25px] flex items-center mt-2 ml-[90px]">
-        <img src={'assets/tier0.png'} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
+        <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
         <div
           class="w-[192px] h-[25px] font-['Roboto_Flex'] font-bold italic text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
         >
@@ -142,9 +141,9 @@
     <ul class="flex flex-col gap-3 text-sm mt-6">
       {#each features as feature}
         <li
-          class="w-[294px] h-[49px] rounded-2xl border border-white/5 pt-3 pr-4 pb-3 flex items-center gap-2"
+          class="w-[294px] h-[49px] rounded-2xl pt-3 pr-4 pb-3 flex items-center gap-2"
         >
-          <img src={'assets/tier0.png'} alt="Tick Icon" class="w-4 h-4 object-cover rounded-lg" />
+          <img src={Tick} alt="Tick Icon" class="w-4 h-4 object-cover rounded-lg" />
           <span
             class="font-inter-tight font-medium text-[15px] leading-[25px]"
           >
@@ -154,7 +153,5 @@
       {/each}
     </ul>
   </div>
-  <!-- ✅ Card ends -->
 
-  <!-- 🔁 Duplicate the above card as needed for multiple tiers -->
 </div>
