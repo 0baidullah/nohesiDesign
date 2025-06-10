@@ -1,9 +1,6 @@
-<h1 class="text-3xl font-bold underline">
+<!-- <h1 class="">
   Hello world!
-</h1>
-<!-- <style lang="postcss">
-  @reference "tailwindcss";
-  :global(html) {
-    background-color: theme(--color-gray-100);
-  }
-</style> -->
+</h1> -->
+
+
+<body class=" " style="background: #08060A;"  ></body>

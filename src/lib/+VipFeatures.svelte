@@ -93,11 +93,11 @@
 
 <div
   class="w-full px-4 z-0 py-6 grid gap-6
-         grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4
+         grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4
          justify-items-center"
 >
   <div
-    class="w-[342px] h-[639px] gap-2 bg-black text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md"
+    class="w-full  sm:w-[300px] md:w-25% lg:w-25% h-[639px] gap-2 bg-black text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md"
   >
     <div class="w-[294px] h-[20px] flex items-center gap-2">
       <img src={Tier} alt="Tier 0" class="w-4 h-4 object-cover rounded-lg" />
@@ -119,21 +119,23 @@
       </div>
     </div>
 
-    <div class="w-[294px] h-[76px]">
+    <div class="w-full h-[76px] flex flex-col items-center">
       <button
-        class="w-[294px] h-[52px] rounded-lg px-[77px] py-4 flex items-center gap-5 bg-[#252327]"
+        class="w-[140px] sm:w-[180px] md:w-[220px] lg:w-[180px] xl:w-[200px] h-[44px] sm:h-[52px] rounded-lg px-2 sm:px-6 py-2 sm:py-4 flex items-center justify-center gap-2 sm:gap-5 bg-[#252327] mx-auto"
       >
         <div
-          class="w-[139px] h-[20px] font-['Roboto_Flex'] font-bold italic text-center text-[16px] uppercase"
+          class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[14px] sm:text-[16px] uppercase"
         >
           current plan
         </div>
       </button>
 
-      <button class="w-[114px] h-[25px] flex items-center mt-2 ml-[90px]">
+      <button
+        class="w-[100px] sm:w-[114px] h-[25px] flex items-center mt-2 mx-auto"
+      >
         <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
         <div
-          class="w-[192px] h-[25px] font-['Roboto_Flex'] font-bold italic text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
+          class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[13px] sm:text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
         >
           Send as a Gift
         </div>
@@ -158,7 +160,7 @@
     </ul>
   </div>
   <div
-    class="w-[342px] h-[639px] gap-2 text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md bg-black/60 backdrop-blur-md"
+    class="  sm:w-[300px] md:w-25% lg:w-25% h-[639px] gap-2 text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md bg-black/60 backdrop-blur-md"
     style="
     background:
       linear-gradient(0deg, rgba(8,6,10,0.44), rgba(8,6,10,0.44)),
@@ -194,26 +196,26 @@
       </div>
     </div>
 
-    <div class="w-[294px] h-[76px]">
-      <button
-        class="w-[294px] h-[52px] rounded-lg px-[77px] py-4 flex items-center gap-5 bg-[#252327]"
-      >
-        <div
-          class="w-[139px] h-[20px] font-['Roboto_Flex'] font-bold italic text-center text-[16px] uppercase"
-        >
-          current plan
-        </div>
-      </button>
-
-      <button class="w-[114px] h-[25px] flex items-center mt-2 ml-[90px]">
-        <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
-        <div
-          class="w-[192px] h-[25px] font-['Roboto_Flex'] font-bold italic text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
-        >
-          Send as a Gift
-        </div>
-      </button>
+   <div class="w-full h-[76px] flex flex-col items-center">
+  <button
+    class="w-[140px] sm:w-[180px] md:w-[220px] lg:w-[180px] xl:w-[200px] h-[44px] sm:h-[52px] rounded-lg px-2 sm:px-6 py-2 sm:py-4 flex items-center justify-center gap-2 sm:gap-5 bg-[#252327] mx-auto"
+  >
+    <div
+      class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[14px] sm:text-[16px] uppercase"
+    >
+      current plan
     </div>
+  </button>
+
+  <button class="w-[100px] sm:w-[114px] h-[25px] flex items-center mt-2 mx-auto">
+    <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
+    <div
+      class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[13px] sm:text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
+    >
+      Send as a Gift
+    </div>
+  </button>
+</div>
 
     <ul class="flex flex-col gap-3 text-sm mt-6">
       {#each features as feature}
@@ -233,7 +235,7 @@
     </ul>
   </div>
   <div
-    class="w-[342px] h-[639px] gap-2 text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md bg-black/60 backdrop-blur-md"
+    class=" sm:w-[300px] md:w-25% lg:w-25% h-[639px] gap-2 text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md bg-black/60 backdrop-blur-md"
     style="
     
       background: radial-gradient(160.5% 100% at 50% 0%, rgba(8, 6, 10, 0.05) 25.18%, rgba(255, 129, 38, 0.05) 100%);
@@ -275,26 +277,26 @@ background: radial-gradient(160.5% 100% at 50% 0%, rgba(8, 6, 10, 0.05) 25.18%, 
       </div>
     </div>
 
-    <div class="w-[294px] h-[76px]">
-      <button
-        class="w-[294px] h-[52px] rounded-lg px-[77px] py-4 flex items-center gap-5 bg-[#252327]"
-      >
-        <div
-          class="w-[139px] h-[20px] font-['Roboto_Flex'] font-bold italic text-center text-[16px] uppercase"
-        >
-          current plan
-        </div>
-      </button>
-
-      <button class="w-[114px] h-[25px] flex items-center mt-2 ml-[90px]">
-        <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
-        <div
-          class="w-[192px] h-[25px] font-['Roboto_Flex'] font-bold italic text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
-        >
-          Send as a Gift
-        </div>
-      </button>
+  <div class="w-full h-[76px] flex flex-col items-center">
+  <button
+    class="w-[140px] sm:w-[180px] md:w-[220px] lg:w-[180px] xl:w-[200px] h-[44px] sm:h-[52px] rounded-lg px-2 sm:px-6 py-2 sm:py-4 flex items-center justify-center gap-2 sm:gap-5 bg-[#252327] mx-auto"
+  >
+    <div
+      class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[14px] sm:text-[16px] uppercase"
+    >
+      current plan
     </div>
+  </button>
+
+  <button class="w-[100px] sm:w-[114px] h-[25px] flex items-center mt-2 mx-auto">
+    <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
+    <div
+      class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[13px] sm:text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
+    >
+      Send as a Gift
+    </div>
+  </button>
+</div>
 
     <ul class="flex flex-col gap-3 text-sm mt-6">
       {#each features as feature}
@@ -317,7 +319,7 @@ background: radial-gradient(160.5% 100% at 50% 0%, rgba(8, 6, 10, 0.05) 25.18%, 
   <div class="relative">
     <!-- Discount Tag -->
     <div
-      class="w-[342px] h-[50px] overflow-hidden absolute -top-3 left-0 right-0 mx-auto px-3 py-1 text-xs font-bold uppercase text-white rounded-t-xl z-0"
+      class="w-full max-w-[342px] sm:w-[300px] md:w-25% lg:w-25% h-[50px] overflow-hidden absolute -top-3 left-0 right-0 mx-auto px-3 py-1 text-xs font-bold uppercase text-white rounded-t-xl z-0"
       style="background: rgba(221, 3, 85, 1);
 "
     >
@@ -326,7 +328,7 @@ background: radial-gradient(160.5% 100% at 50% 0%, rgba(8, 6, 10, 0.05) 25.18%, 
 
     <!-- Original Card Code -->
     <div
-      class="w-[342px] relative z-10 h-[639px] gap-2 text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md bg-black/60 backdrop-blur-md"
+      class=" max-w-[342px] sm:w-[300px] md:w-25% lg:w-25% relative z-10 h-[639px] gap-2 text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md bg-black/60 backdrop-blur-md"
       style="
       background: radial-gradient(160.5% 100% at 50% 0%, rgba(8, 6, 10, 0.22) 25.18%, rgba(254, 44, 85, 0.22) 100%);
     "
@@ -365,26 +367,26 @@ background: radial-gradient(160.5% 100% at 50% 0%, rgba(8, 6, 10, 0.05) 25.18%, 
         </div>
       </div>
 
-      <div class="w-[294px] h-[76px]">
-        <button
-          class="w-[294px] h-[52px] rounded-lg px-[77px] py-4 flex items-center gap-5 bg-[#252327]"
-        >
-          <div
-            class="w-[139px] h-[20px] font-['Roboto_Flex'] font-bold italic text-center text-[16px] uppercase"
-          >
-            current plan
-          </div>
-        </button>
+    <div class="w-full h-[76px] flex flex-col items-center">
+  <button
+    class="w-[140px] sm:w-[180px] md:w-[220px] lg:w-[180px] xl:w-[200px] h-[44px] sm:h-[52px] rounded-lg px-2 sm:px-6 py-2 sm:py-4 flex items-center justify-center gap-2 sm:gap-5 bg-[#252327] mx-auto"
+  >
+    <div
+      class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[14px] sm:text-[16px] uppercase"
+    >
+      current plan
+    </div>
+  </button>
 
-        <button class="w-[114px] h-[25px] flex items-center mt-2 ml-[90px]">
-          <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
-          <div
-            class="w-[192px] h-[25px] font-['Roboto_Flex'] font-bold italic text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
-          >
-            Send as a Gift
-          </div>
-        </button>
-      </div>
+  <button class="w-[100px] sm:w-[114px] h-[25px] flex items-center mt-2 mx-auto">
+    <img src={Gift} alt="Gift Icon" class="w-3.5 h-3.5 mr-1" />
+    <div
+      class="w-full text-center font-['Roboto_Flex'] font-bold italic text-[13px] sm:text-[15px] leading-[25px] underline underline-offset-3 text-[#ACABAD]"
+    >
+      Send as a Gift
+    </div>
+  </button>
+</div>
 
       <ul class="flex flex-col gap-3 text-sm mt-6">
         {#each features as feature}
@@ -407,5 +409,3 @@ background: radial-gradient(160.5% 100% at 50% 0%, rgba(8, 6, 10, 0.05) 25.18%, 
     </div>
   </div>
 </div>
-
-`

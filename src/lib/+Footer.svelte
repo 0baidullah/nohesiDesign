@@ -129,10 +129,5 @@
 
 <style>
   /* If you need to add any custom styles */
-  .bg-gray-1000 {
-    background-color: #111;
-  }
-  a {
-    transition: color 0.2s ease;
-  }
+
 </style>

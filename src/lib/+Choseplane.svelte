@@ -20,7 +20,7 @@
 </script>
 
 <!-- Responsive Container -->
-<div class="w-full bg-black px-4 py-8">
+<div class="w-full px-4 py-8" style="background: #08060A;">
   <div class="relative mx-auto max-w-[1368px] px-4">
     <!-- Background Patterns -->
     <div class="absolute inset-0 opacity-10">
@@ -57,11 +57,11 @@
       </div>
 
       <!-- OTHERS -->
-      <h1
+      <!-- <h1
         class="font-['Roboto_Flex'] font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[64px] uppercase text-white"
       >
         OTHERS
-      </h1>
+      </h1> -->
     </div>
   </div>
 </div>

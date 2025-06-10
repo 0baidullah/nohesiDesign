@@ -4,33 +4,41 @@
       name: "TIER 0",
       color: "text-gray-400",
       bgColor: "bg-gray-500",
-      button: "CURRENT PLAN",
+      buttonText: "CURRENT PLAN",
       buttonClass: "bg-gray-600 text-gray-300 cursor-not-allowed",
       isActive: false,
+      icon : Tier0,
+      description: 'Get a chance'
     },
     {
       name: "TIER 1",
       color: "text-white",
       bgColor: "bg-white",
-      button: "SUBSCRIBE",
+      buttonText: "SUBSCRIBE",
       buttonClass: "bg-white text-black hover:bg-gray-100",
       isActive: false,
+      icon: Tier0,
+      description: 'Everything You need to know'
     },
     {
       name: "TIER 2",
       color: "text-orange-500",
       bgColor: "bg-orange-500",
-      button: "FREE 7-DAYS TRIAL",
+      buttonText: "FREE 7-DAYS TRIAL",
       buttonClass: "bg-orange-500 text-white hover:bg-orange-600",
       isActive: false,
+      icon: Tier3,
+      description: 'Amplify your experience'
     },
     {
       name: "TIER 3",
       color: "text-red-500",
       bgColor: "bg-red-500",
-      button: "SUBSCRIBE",
+      buttonText: "SUBSCRIBE",
       buttonClass: "bg-red-500 text-white hover:bg-red-600",
       isActive: false,
+      icon: Tier4,
+      description: 'Reach new limits'
     },
   ];
 
@@ -40,291 +48,129 @@
   import Tier4 from "../public/static/assets/Tier4.png";
 </script>
 
-<div class="w-full h-[101px] px-9">
-  <div class="flex justify-end">
-    <div class="grid grid-cols-4 rounded-2xl border border-white/5">
-      <div class="w-[300px] h-[101px]">
-        <div
-          class="w-[280px] h-[20px] justify-center py-4 flex text-center items-center gap-2"
-        >
-          <img
-            src={Tier0}
-            alt="Tier 0"
-            class="w-4 h-4 object-cover rounded-lg"
-          />
-          <div
-            class="font-['Roboto_Flex'] justify-center font-bold italic text-[16px] leading-5 tracking-normal uppercase"
-          >
-            TIER 0
-          </div>
-        </div>
-        <button
-          class="w-[220px] h-[36px] ml-8 justify-center rounded-lg px-4 flex items-center gap-5 bg-white"
-        >
-          <div
-            class=" font-['Roboto_Flex'] justify-center text-black font-bold italic text-center text-[16px] uppercase"
-          >
-            currentas plan
-          </div>
-        </button>
-      </div>
 
-      <div class="w-[280px] h-[101px]">
-        <div
-          class="w-[280px] h-[20px] justify-center py-4 flex text-center items-center gap-2"
-        >
-          <img
-            src={Tier0}
-            alt="Tier 0"
-            class="w-4 h-4 object-cover rounded-lg"
-          />
-          <div
-            class="font-['Roboto_Flex'] justify-center font-bold italic text-[16px] leading-5 tracking-normal uppercase"
-          >
-            TIER 1
+
+
+
+
+<div class="w-full px-4 md:px-9">
+  <!-- Desktop/Tablet Table View -->
+  <div class="hidden lg:block">
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-white/5 rounded-2xl bg-black/20 backdrop-blur-sm">
+        <thead>
+          <tr class="h-[101px]">
+            <!-- Features Column -->
+            <th class="w-[300px] p-2 text-left">
+              <div class="font-['Inter_Tight'] text-[18px] leading-5 tracking-normal text-white/80 px-4">
+                Features
+              </div>
+            </th>
+            
+            <!-- Tier Columns -->
+            {#each tiers as tier}
+              <th class="w-[280px] p-2">
+                <div class="flex items-center gap-2 justify-center py-4">
+                  <img src={tier.icon} alt={tier.name} class="w-4 h-4 object-cover rounded-lg" />
+                  <div class="font-['Roboto_Flex'] font-bold italic text-[16px] uppercase text-white">
+                    {tier.name}
+                  </div>
+                </div>
+                <button class="w-[220px] h-[36px] mx-auto block rounded-lg px-4 bg-white hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                  <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
+                    {tier.buttonText}
+                  </div>
+                </button>
+              </th>
+            {/each}
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="h-[48px] border-t border-white/5">
+            <td class="w-[300px] text-left px-4">
+              <div class="font-['Inter_Tight'] text-[18px] leading-5 tracking-normal text-white">
+                Features
+              </div>
+            </td>
+            {#each tiers as tier}
+              <td class="w-[280px] text-center px-4">
+                <div class="font-['Inter_Tight'] text-[16px] leading-5 tracking-normal text-white/80">
+                  {tier.description}
+                </div>
+              </td>
+            {/each}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Mobile/Tablet Card View -->
+  <div class="lg:hidden">
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+      {#each tiers as tier}
+        <div class="border border-white/10 rounded-2xl p-6 bg-black/20 backdrop-blur-sm hover:border-white/20 transition-colors duration-200">
+          <!-- Tier Header -->
+          <div class="flex items-center gap-3 justify-center mb-6">
+            <img src={tier.icon} alt={tier.name} class="w-5 h-5 object-cover rounded-lg" />
+            <div class="font-['Roboto_Flex'] font-bold italic text-[18px] uppercase text-white">
+              {tier.name}
+            </div>
           </div>
+
+          <!-- Description -->
+          <div class="text-center mb-6">
+            <div class="font-['Inter_Tight'] text-[16px] leading-6 tracking-normal text-white/80">
+              {tier.description}
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button class="w-full h-[44px] rounded-lg px-4 bg-white hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+            <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
+              {tier.buttonText}
+            </div>
+          </button>
         </div>
-        <button
-          class="w-[220px] h-[36px] ml-8 justify-center rounded-lg px-4 flex items-center gap-5 bg-white"
-        >
-          <div
-            class=" font-['Roboto_Flex'] text-black justify-center font-bold italic text-center text-[16px] uppercase"
-          >
-            currentas plan
+      {/each}
+    </div>
+  </div>
+
+  <!-- Extra Small Mobile - Stacked View -->
+  <div class="sm:hidden">
+    <div class="space-y-3">
+      {#each tiers as tier}
+        <div class="border border-white/10 rounded-xl p-4 bg-black/20 backdrop-blur-sm">
+          <!-- Compact Tier Header -->
+          <div class="flex items-center gap-2 mb-3">
+            <img src={tier.icon} alt={tier.name} class="w-4 h-4 object-cover rounded" />
+            <div class="font-['Roboto_Flex'] font-bold italic text-[14px] uppercase text-white">
+              {tier.name}
+            </div>
           </div>
-        </button>
-      </div>
-      <div class="w-[280px] h-[101px]">
-        <div
-          class="w-[280px] h-[20px] justify-center py-4 flex text-center items-center gap-2"
-        >
-          <img
-            src={Tier3}
-            alt="Tier 0"
-            class="w-4 h-4 object-cover rounded-lg"
-          />
-          <div
-            class="font-['Roboto_Flex'] justify-center font-bold italic text-[16px] leading-5 tracking-normal uppercase"
-          >
-            TIER 2
+
+          <!-- Compact Description -->
+          <div class="mb-3">
+            <div class="font-['Inter_Tight'] text-[14px] leading-5 text-white/80">
+              {tier.description}
+            </div>
           </div>
+
+          <!-- Compact Button -->
+          <button class="w-full h-[36px] rounded-lg px-3 bg-white hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+            <div class="font-['Roboto_Flex'] text-black font-bold italic text-[14px] uppercase">
+              {tier.buttonText}
+            </div>
+          </button>
         </div>
-        <button
-          class="w-[220px] h-[36px] text-black ml-8 justify-center rounded-lg px-4 flex items-center gap-5 bg-white"
-        >
-          <div
-            class=" font-['Roboto_Flex'] justify-center font-bold italic text-center text-[16px] uppercase"
-          >
-            currentas plan
-          </div>
-        </button>
-      </div>
-      <div class="w-[280px] h-[101px]">
-        <div
-          class="w-[280px] h-[20px] justify-center py-4 flex text-center items-center gap-2"
-        >
-          <img
-            src={Tier4}
-            alt="Tier 0"
-            class="w-4 h-4 object-cover rounded-lg"
-          />
-          <div
-            class="font-['Roboto_Flex'] justify-center font-bold italic text-[16px] leading-5 tracking-normal uppercase"
-          >
-            TIER 3
-          </div>
-        </div>
-        <button
-          class="w-[220px] h-[36px] text-black ml-8 justify-center rounded-lg px-4 flex items-center gap-5 bg-white"
-        >
-          <div
-            class=" font-['Roboto_Flex'] justify-center font-bold italic text-center text-[16px] uppercase"
-          >
-            currentas plan
-          </div>
-        </button>
-      </div>
+      {/each}
     </div>
   </div>
 </div>
-
-<div class="w-full h-[48px] px-9">
-  <div class="flex justify-end">
-    <div class="grid grid-cols-5 rounded-2xl border border-white/5">
-      <div class="w-[300px] h-[48px]">
-        <div class="w-[280px] h-[20px] justify-start py-4 flex gap-2">
-          <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-            Features
-          </div>
-        </div>
-      </div>
-      <div class="w-[280px] h-[48px]">
-        <div class="w-[280px] h-[20px] justify-center py-4 flex gap-2">
-          <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-            Get a chance
-          </div>
-        </div>
-      </div>
-      <div class="w-[280px] h-[48px]">
-        <div class="w-[280px] h-[20px] justify-center py-4 flex gap-2">
-          <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-            Everything You need to know
-          </div>
-        </div>
-      </div>
-      <div class="w-[280px] h-[48px]">
-        <div class="w-[280px] h-[20px] justify-center py-4 flex gap-2">
-          <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-            Amplifi you experience
-          </div>
-        </div>
-      </div>
-      <div class="w-[280px] h-[48px]">
-        <div class="w-[280px] h-[20px] justify-center py-4 flex gap-2">
-          <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-            Reach new limits
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="w-full h-[101px] px-9">
-  <div class="flex justify-end">
-    <table class="table-fixed border border-white/5 rounded-2xl w-auto">
-      <thead>
-        <tr class="h-[101px]">
-          <!-- TIER 0 -->
-          <th class="w-[300px] p-2">
-            <div class="flex items-center gap-2 justify-center py-4">
-              <img src={Tier0} alt="Tier 0" class="w-4 h-4 object-cover rounded-lg" />
-              <div class="font-['Roboto_Flex'] font-bold italic text-[16px] uppercase">
-                TIER 0
-              </div>
-            </div>
-            <button class="w-[220px] h-[36px] mx-auto block rounded-lg px-4 bg-white flex items-center justify-center">
-              <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
-                currentas plan
-              </div>
-            </button>
-          </th>
-          <th class="w-[300px] p-2">
-            <div class="flex items-center gap-2 justify-center py-4">
-              <img src={Tier0} alt="Tier 0" class="w-4 h-4 object-cover rounded-lg" />
-              <div class="font-['Roboto_Flex'] font-bold italic text-[16px] uppercase">
-                TIER 0
-              </div>
-            </div>
-            <button class="w-[220px] h-[36px] mx-auto block rounded-lg px-4 bg-white flex items-center justify-center">
-              <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
-                currentas plan
-              </div>
-            </button>
-          </th>
-
-          <!-- TIER 1 -->
-          <th class="w-[300px] p-2">
-            <div class="flex items-center gap-2 justify-center py-4">
-              <img src={Tier0} alt="Tier 1" class="w-4 h-4 object-cover rounded-lg" />
-              <div class="font-['Roboto_Flex'] font-bold italic text-[16px] uppercase">
-                TIER 1
-              </div>
-            </div>
-            <button class="w-[220px] h-[36px] mx-auto block rounded-lg px-4 bg-white flex items-center justify-center">
-              <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
-                currentas plan
-              </div>
-            </button>
-          </th>
-
-          <!-- TIER 2 -->
-          <th class="w-[300px] p-2">
-            <div class="flex items-center gap-2 justify-center py-4">
-              <img src={Tier3} alt="Tier 2" class="w-4 h-4 object-cover rounded-lg" />
-              <div class="font-['Roboto_Flex'] font-bold italic text-[16px] uppercase">
-                TIER 2
-              </div>
-            </div>
-            <button class="w-[220px] h-[36px] mx-auto block rounded-lg px-4 bg-white flex items-center justify-center">
-              <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
-                currentas plan
-              </div>
-            </button>
-          </th>
-
-          <!-- TIER 3 -->
-          <th class="w-[300px] p-2">
-            <div class="flex items-center gap-2 justify-center py-4">
-              <img src={Tier4} alt="Tier 3" class="w-4 h-4 object-cover rounded-lg" />
-              <div class="font-['Roboto_Flex'] font-bold italic text-[16px] uppercase">
-                TIER 3
-              </div>
-            </div>
-            <button class="w-[220px] h-[36px] mx-auto block rounded-lg px-4 bg-white flex items-center justify-center">
-              <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
-                currentas plan
-              </div>
-            </button>
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr class="h-[48px]">
-          <!-- Column 1 -->
-          <td class="w-[300px] text-left px-4">
-            <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-              Features
-            </div>
-          </td>
-
-          <!-- Column 2 -->
-          <td class="w-[280px] text-center px-4">
-            <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-              Get a chance
-            </div>
-          </td>
-
-          <!-- Column 3 -->
-          <td class="w-[280px] text-center px-4">
-            <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-              Everytding You need to know
-            </div>
-          </td>
-
-          <!-- Column 4 -->
-          <td class="w-[280px] text-center px-4">
-            <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-              Amplifi you experience
-            </div>
-          </td>
-
-          <!-- Column 5 -->
-          <td class="w-[280px] text-center px-4">
-            <div class="font-inter-tight text-[18px] leading-5 tracking-normal">
-              Reach new limits
-            </div>
-          </td>
-        </tr>
-      </tbody>
-      
-    </table>
-  </div>
-</div>
-
-
-
 
 
 
 <style>
-  :global(body) {
-    background-color: rgb(17, 24, 39);
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      sans-serif;
-  }
+ 
 </style>
