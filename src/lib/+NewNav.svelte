@@ -13,7 +13,7 @@
           <img
             src={logo}
             alt="Logo"
-            class="lg:h-8 lg:w-12 sm:h-8 sm:w-8 rounded-full"
+            class="lg:h-8 lg:w-8 sm:h-8 sm:w-8 rounded-full"
           />
         </a>
       </div>
