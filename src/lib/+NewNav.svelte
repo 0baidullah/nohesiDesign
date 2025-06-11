@@ -7,7 +7,7 @@
 <nav
   class="bg-white text-black w-80% flex items-center justify-between h-20 lg:gap-12 lg:px-8 sm:px-4 px-2 "
 >
-
+<div class="py-5"></div>
  <div class="lg:hidden flex items-center justify-items-center ">
         <a href="/" class="flex items-center group">
           <img
@@ -18,8 +18,8 @@
         </a>
       </div>
   <ul
-    class="absolute w-full top-16  flex  flex-col  gap-3 items-center font-['Roboto_Flex'] text-[15px] lg:items-center lg:font-medium leading-5 tracking-normal text-center lg:static
-    lg:flex-row lg:space-x-12 font-bold uppercase lg:text-xs lg:flex"
+    class="absolute w-full top-16  flex  flex-col  gap-3 items-center font-['Roboto_Flex'] text-[15px] lg:items-center  leading-5 tracking-normal text-center lg:static
+    lg:flex-row lg:space-x-12  lowercase   lg:flex"
     class:hidden={!menuOpen}
   >
     <li  >
@@ -62,14 +62,16 @@
   >
     <i class="fa-solid fa-bars text-black"></i>
   </button>
-  <div class="hidden lg:flex  w-50% space-x-2 ">
+  <div class="hidden lg:flex  w-50%  space-x-2 ">
     <button
-      class="font-['Roboto_Flex'] text-sm whitespace-nowrap w-[92px] h-[40px] border-gray-300 rounded-2xl"
+      class="font-['Roboto_Flex'] text-[15px] whitespace-nowrap w-[92px] h-[40px] border-gray-300 rounded-2xl"
       style="background:#F0F0F0">Sign in</button
     >
     <button
-      class="font-['Roboto_Flex'] text-sm whitespace-nowrap w-[92px] h-[40px] border-blue-700 rounded-2xl"
+      class="font-['Roboto_Flex'] text-[15px] whitespace-nowrap w-[92px] h-[40px] border-blue-700 rounded-2xl"
       style="background: var(--def, #5C53E9);">Sign Up</button
     >
   </div>
+
+
 </nav>

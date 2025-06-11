@@ -158,6 +158,7 @@
         </li>
       {/each}
     </ul>
+ 
   </div>
   <div
     class="  sm:w-[300px] md:w-25% lg:w-25% h-[639px] gap-2 text-white p-4 rounded-2xl border border-white/5 flex flex-col shadow-md bg-black/60 backdrop-blur-md"
