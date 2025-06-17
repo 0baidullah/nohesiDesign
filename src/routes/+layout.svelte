@@ -10,12 +10,12 @@
   
 </script>
 
-<div class="antialiased  " style="background-color : #08060A;">
+<div class=" "  style=" color: white; max-width: 100%; max-height: 100%;">
   <!-- <Header /> -->
   <NewNav />
   <!-- <Nav /> -->
-  <!-- <main class="flex flex-col items-center justify-center min-h-screen " >
+  <main  class=" max-w-full max-h-full" >
     <slot />
-  </main> -->
+  </main>
   <!-- <Footer /> -->
 </div>

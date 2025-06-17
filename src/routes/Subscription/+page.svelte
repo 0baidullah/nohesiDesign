@@ -5,9 +5,10 @@
   import Feature from "../../lib/+VipFeatures.svelte";
   import Limits from "$lib/+Limits.svelte";
   import Card from "$lib/+Card.svelte";
+  import Cart from "../../lib/+Cart.svelte";
 </script>
 
-<div class="antialiased bg-white text-white max-w-full max-h-full" style="background: #08060A;">
+<!-- <div class="antialiased bg-white text-white max-w-full max-h-full" style="background: #08060A;"> -->
   <!-- <DarkStrip /> -->
   <!-- <DarkStrip /> -->
   <!-- <Plane /> -->
@@ -21,4 +22,7 @@
   <!-- <DarkStrip /> -->
   <!-- <Contact /> -->
   <!-- <DarkStrip /> -->
-</div>
+<!-- </div> -->
+
+<Cart />
+

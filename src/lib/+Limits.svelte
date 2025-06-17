@@ -76,7 +76,7 @@
                     {tier.name}
                   </div>
                 </div>
-                <button class="w-[220px] h-[36px] mx-auto block rounded-lg px-4 bg-white hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                <button class="w-[220px] h-[36px] mx-auto  rounded-lg px-4 bg-white hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
                   <div class="font-['Roboto_Flex'] text-black font-bold italic text-[16px] uppercase">
                     {tier.buttonText}
                   </div>
